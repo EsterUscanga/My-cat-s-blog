@@ -15,7 +15,7 @@ body {
 }
 #content {
     overflow: auto;}
-#nav, .registro, .home, #footer {
+#nav, .home, .discusion, .registro, #footer {
     margin: 1%;}
 .logo{
     display: inline;
@@ -33,16 +33,34 @@ li {
 #nav, #footer {
     background-color: #efefef;
     padding: 0.5em 0;}
-.registro{
-    height: 20em;
-    margin-bottom: 1em;
-    background-color: #efefef;
-} 
 
 .home {
     height: 30em;
     margin-bottom: 1em;
     background-color: #efefef;
+}
+.discusion{
+    width: 60%;
+    float: left;
+    margin: 1%;
+    height: 30em;
+    margin-bottom: 1em;
+    background-color: #efefef;
+}
+.registro{
+    width: 36%;
+    float: left;
+    margin: 1%;
+    margin-right: 0%;
+    height: 30em;
+    margin-bottom: 1em;
+    background-color: #efefef;
+}
+.porsi {
+    height: 30em;
+    margin-bottom: 1em;
+    background-color: #efefef;
+    margin: 1%;
 }
 .article {
     height: 10em;
