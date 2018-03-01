@@ -15,7 +15,7 @@ body {
 }
 #content {
     overflow: auto;}
-#nav, .home, .discusion, .registro, #footer {
+#nav, .home, .registro, #footer {
     margin: 1%;}
 .logo{
     display: inline;
@@ -30,7 +30,7 @@ body {
 li {
     display: inline;
     padding: 0.5em;}
-#nav, #footer {
+#nav, #footer, .home, .registro {
     background-color: #efefef;
     padding: 0.5em 0;}
 
@@ -39,22 +39,9 @@ li {
     margin-bottom: 1em;
     background-color: #efefef;
 }
-.discusion{
-    width: 60%;
-    float: left;
-    margin: 1%;
-    height: 30em;
-    margin-bottom: 1em;
-    background-color: #efefef;
-}
+
 .registro{
-    width: 36%;
-    float: left;
-    margin: 1%;
-    margin-right: 0%;
     height: 30em;
-    margin-bottom: 1em;
-    background-color: #efefef;
 }
 .porsi {
     height: 30em;
