@@ -18,41 +18,48 @@
 
 </head>
 <body>
-    <!--Login-->
-    <div class="text-center" style="padding:50px 0">
-        <div class="logo" style="color: DarkOrange">login</div>
-        <!-- Main Form -->
-        <div class="login-form-1">
-            <form id="login-form" class="text-left">
-                <div class="login-form-main-message"></div>
-                <div class="main-login-form">
-                    <div class="login-group">
-                        <div class="form-group">
-                            <label for="lg_username" class="sr-only">Usuario</label>
-                            <input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="Usuario">
-                        </div>
-                        <div class="form-group">
-                            <label for="lg_password" class="sr-only">Password</label>
-                            <input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="Contrasena">
-                        </div>
-                        <div class="form-group login-group-checkbox">
-                            <input type="checkbox" id="lg_remember" name="lg_remember">
-                            <label for="lg_remember">Recordar contrasena</label>
-                        </div>
-                    </div>
-                    <button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
-                </div>
-                <div class="etc-login-form">
-                    <p>Olvidaste tu contrasena? <a href="#forgot-password-form">click aqui</a></p>
-                    <p>Nuevo usuario? <a href="#register-form">crea una nueva cuenta</a></p>
-                </div>
-            </form>
-        </div>
-    <!-- end:Main Form -->
+  
 
-    <!-- REGISTRATION FORM -->
-<div class="text-center" style="padding:50px 0">
-        <div class="logo" style="color: DarkOrange">register</div>
+    <div class="text-center" style="padding:50px 0" >
+
+        <div id="uno">
+        <!--LOGIN-->
+        <div class="text-center" style="padding:50px 0">  
+            <div class="logo" style="color: DarkOrange">Iniciar seción</div>
+            <!-- Main Form -->
+            <div class="login-form-1">
+                <form id="login-form" class="text-left">
+                    <div class="login-form-main-message"></div>
+                        <div class="main-login-form">
+                            <div class="login-group">
+                                <div class="form-group">
+                                    <label for="lg_username" class="sr-only">Usuario</label>
+                                    <input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="Usuario">
+                                </div>
+                            <div class="form-group">
+                                <label for="lg_password" class="sr-only">Password</label>
+                                <input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="Contrasena">
+                            </div>
+                            <div class="form-group login-group-checkbox">
+                                <input type="checkbox" id="lg_remember" name="lg_remember">
+                                <label for="lg_remember">Recordar contrasena</label>
+                            </div>
+
+                        </div>
+                        <button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+                    </div>
+                    <div class="etc-login-form">
+                        <p>Olvidaste tu contrasena? <a href="#forgot-password-form" id="olvidar">click aqui</a></p>
+                        <p>Nuevo usuario? <a href="#register-form" id="crear">crea una cuenta</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+
+        <!--Register-->
+        <div id="dos" style="display:none">
+        <div class="logo" style="color: DarkOrange">Registro</div>
         <!-- Main Form -->
         <div class="login-form-1">
             <form id="register-form" class="text-left">
@@ -60,16 +67,16 @@
                 <div class="main-login-form">
                     <div class="login-group">
                         <div class="form-group">
-                            <label for="reg_username" class="sr-only">Email address</label>
-                            <input type="text" class="form-control" id="reg_username" name="reg_username" placeholder="username">
+                            <label for="reg_username" class="sr-only">Email</label>
+                            <input type="text" class="form-control" id="reg_username" name="reg_username" placeholder="usuario">
                         </div>
                         <div class="form-group">
                             <label for="reg_password" class="sr-only">Password</label>
-                            <input type="password" class="form-control" id="reg_password" name="reg_password" placeholder="password">
+                            <input type="password" class="form-control" id="reg_password" name="reg_password" placeholder="contrasena">
                         </div>
                         <div class="form-group">
-                            <label for="reg_password_confirm" class="sr-only">Password Confirm</label>
-                            <input type="password" class="form-control" id="reg_password_confirm" name="reg_password_confirm" placeholder="confirm password">
+                            <label for="reg_password_confirm" class="sr-only">Confirmar contrasena</label>
+                            <input type="password" class="form-control" id="reg_password_confirm" name="reg_password_confirm" placeholder="confirmar contrasena">
                         </div>
                         
                         <div class="form-group">
@@ -77,62 +84,91 @@
                             <input type="text" class="form-control" id="reg_email" name="reg_email" placeholder="email">
                         </div>
                         <div class="form-group">
-                            <label for="reg_fullname" class="sr-only">Full Name</label>
-                            <input type="text" class="form-control" id="reg_fullname" name="reg_fullname" placeholder="full name">
+                            <label for="reg_fullname" class="sr-only">Nombre completo</label>
+                            <input type="text" class="form-control" id="reg_fullname" name="reg_fullname" placeholder="nombre completo">
                         </div>
                         
                         <div class="form-group login-group-checkbox">
-                            <input type="radio" class="" name="reg_gender" id="male" placeholder="username">
-                            <label for="male">male</label>
+                            <input type="radio" class="" name="reg_gender" id="male" placeholder="nombre de usuario">
+                            <label for="male">masculino</label>
                             
-                            <input type="radio" class="" name="reg_gender" id="female" placeholder="username">
-                            <label for="female">female</label>
+                            <input type="radio" class="" name="reg_gender" id="female" placeholder="nombre de usuario">
+                            <label for="female">femenino</label>
                         </div>
                         
                         <div class="form-group login-group-checkbox">
                             <input type="checkbox" class="" id="reg_agree" name="reg_agree">
-                            <label for="reg_agree">i agree with <a href="#">terms</a></label>
+                            <label for="reg_agree">Estoy de acuerdo con <a href="#">terminos</a></label>
                         </div>
                     </div>
                     <button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
                 </div>
                 <div class="etc-login-form">
-                    <p>already have an account? <a href="#">login here</a></p>
+                    <p>ya tienes una cuenta? <a href="#" id="tener">inicia seción aquí</a></p>
                 </div>
             </form>
         </div>
-        <!-- end:Main Form -->
-    </div>
-    
-    <!-- FORGOT PASSWORD FORM -->
-    <div class="text-center" style="padding:50px 0">
-        <div class="logo">forgot password</div>
-        <!-- Main Form -->
-        <div class="login-form-1">
-            <form id="forgot-password-form" class="text-left">
-                <div class="etc-login-form">
-                    <p>When you fill in your registered email address, you will be sent instructions on how to reset your password.</p>
-                </div>
-                <div class="login-form-main-message"></div>
-                <div class="main-login-form">
-                    <div class="login-group">
-                        <div class="form-group">
-                            <label for="fp_email" class="sr-only">Email address</label>
-                            <input type="text" class="form-control" id="fp_email" name="fp_email" placeholder="email address">
+        </div>
+        <!--Forgot-->
+
+        <div id="tres" style="display:none">
+        <div class="text-center" style="padding:50px 0">
+            <div class="logo" style="color: DarkOrange">Contraseña olvidada</div>
+            <!-- Main Form -->
+            <div class="login-form-1">
+                <form id="forgot-password-form" class="text-left">
+                    <div class="etc-login-form">
+                        <p> Cuando ingrese su dirección de correo electrónico registrada, se le enviarán instrucciones sobre cómo restablecer su contraseña. </ p>                    </div>
+                    <div class="login-form-main-message"></div>
+                    <div class="main-login-form">
+                        <div class="login-group">
+                            <div class="form-group">
+                                <label for="fp_email" class="sr-only">Dirección de email</label>
+                                <input type="text" class="form-control" id="fp_email" name="fp_email" placeholder="email">
+                            </div>
                         </div>
+                        <button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
                     </div>
-                    <button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
-                </div>
-                <div class="etc-login-form">
-                    <p>already have an account? <a href="#">login here</a></p>
-                    <p>new user? <a href="#">create new account</a></p>
-                </div>
-            </form>
+                    <div class="etc-login-form">
+                        <p>ya tienes una cuenta? <a href="#" id="have">inicia seción aquí</a></p>
+                        <p>nuevo usuario? <a href="#" id="create">crea una nueva cuenta</a></p>
+                    </div>
+                </form>
+            </div>
         </div>
-        <!-- end:Main Form -->
     </div>
-    
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#olvidar").click(function(){
+            $("#uno").hide()
+            $("#dos").hide()
+            $("#tres").show()
+        })
+        $("#crear").click(function(){
+            $("#uno").hide()
+            $("#dos").show()
+            $("#tres").hide()
+        })
+        $("#tener").click(function(){
+            $("#uno").show()
+            $("#dos").hide()
+            $("#tres").hide()
+        })
+        $("#have").click(function(){
+            $("#uno").show()
+            $("#dos").hide()
+            $("#tres").hide()
+        })
+        $("#create").click(function(){
+            $("#uno").hide()
+            $("#dos").show()
+            $("#tres").hide()
+        })
+    })        
+    </script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>    
 </body>
