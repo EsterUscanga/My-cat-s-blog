@@ -27,3 +27,21 @@ function getRFC(register){
     document.getElementById('rfc').value = RFC.toUpperCase()
     
 }
+
+function validatePassword(register){
+    var password1 = register.regpassword.value
+    var password2 = register.regpasswordconfirm.value
+    
+    if(password2 !== password1){
+        alert("Contraseña invalida")
+    }
+}
+
+function validatePasswordOnSubmit(register){
+    var password1 = register.regpassword.value
+    var password2 = register.regpasswordconfirm.value
+    
+    if(password2 !== password1){
+        alert("Contraseña invalida")
+    }
+}
