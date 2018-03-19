@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/registro_style.css">
     <script src="js/registro_js.js"></script>
+    <script src="js/registro.js"></script>
 
     <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
@@ -28,17 +29,19 @@
             <div class="logo" style="color: DarkOrange">Iniciar seción</div>
             <!-- Main Form -->
             <div class="login-form-1">
-                <form id="login-form" class="text-left">
+                <form id="login" class="text-left">
                     <div class="login-form-main-message"></div>
                         <div class="main-login-form">
                             <div class="login-group">
                                 <div class="form-group">
-                                    <label for="lg_username" class="sr-only">Usuario</label>
-                                    <input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="Usuario">
+                                    <b style="color: #696969">Usuario:</b>
+                                    <br>
+                                    <input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="">
                                 </div>
                             <div class="form-group">
-                                <label for="lg_password" class="sr-only">Password</label>
-                                <input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="Contrasena">
+                                <b style="color: #696969">Contraseña:</b>
+                                <br>
+                                <input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="">
                             </div>
                             <div class="form-group login-group-checkbox">
                                 <input type="checkbox" id="lg_remember" name="lg_remember">
@@ -62,37 +65,58 @@
         <div class="logo" style="color: DarkOrange">Registro</div>
         <!-- Main Form -->
         <div class="login-form-1">
-            <form id="register-form" class="text-left">
+            <form id="register" class="text-left">
                 <div class="login-form-main-message"></div>
                 <div class="main-login-form">
                     <div class="login-group">
                         <div class="form-group">
-                            <label for="reg_username" class="sr-only">Email</label>
-                            <input type="text" class="form-control" id="reg_username" name="reg_username" placeholder="usuario">
+                            <b style="color: #696969">Usuario:</b>
+                            <br>
+                            <input type="text" class="form-control" id="reg_username" name="reg_username"maxlength="20" minlength="5" title="El nombre de usuario no puede medir más de 20 caracteres ni menos 5" required >
                         </div>
                         <div class="form-group">
-                            <label for="reg_password" class="sr-only">Password</label>
-                            <input type="password" class="form-control" id="reg_password" name="reg_password" placeholder="contrasena">
+                            <b style="color: #696969">Contraseña:</b>
+                            <br>
+                            <input type="password" class="form-control" id="password" name="regpassword"  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Su contrasena debe contener al menos una mayuscula, un numero o caracter especial con una longitud de 8 caracteres">
                         </div>
                         <div class="form-group">
-                            <label for="reg_password_confirm" class="sr-only">Confirmar contrasena</label>
-                            <input type="password" class="form-control" id="reg_password_confirm" name="reg_password_confirm" placeholder="confirmar contrasena">
+                            <b style="color: #696969">Confirmar contraseña:</b>  
+                            <br>                          
+                            <input type="password" class="form-control" id="password_confirm" name="regpasswordconfirm" onsubmit="validatePasswordOnSubmit(register)" placeholder="" >
                         </div>
                         
                         <div class="form-group">
+                            <b style="color: #696969">Email:</b>   
+                            <br>                         
                             <label for="reg_email" class="sr-only">Email</label>
-                            <input type="text" class="form-control" id="reg_email" name="reg_email" placeholder="email">
+                            <input type="text" class="form-control" id="reg_email" name="reg_email" oninput="validatePassword(register)">
                         </div>
                         <div class="form-group">
-                            <label for="reg_fullname" class="sr-only">Nombre completo</label>
-                            <input type="text" class="form-control" id="reg_fullname" name="reg_fullname" placeholder="nombre completo">
+                            <b style="color: #696969">Nombres:</b>
+                            <br>
+                            <input type="text" class="form-control" id="reg_fullname" name="nombre" placeholder="">
+                        </div>  
+                        <div class="form-group">
+                            <b style="color: #696969">Apellido paterno:</b>
+                            <input type="text" class="form-control" id="reg_fullname" name="paterno" placeholder="">
                         </div>
-                        
+                        <div class="form-group">
+                            <b style="color: #696969">Apellido materno:</b>                            
+                            <label for="materno" class="sr-only">rfc</label>
+                            <input type="text" class="form-control" id="reg_fullname" name="materno" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <b style="color: #696969">fecha de nacimiento:</b> <input type="date" name="datebd" id="datebd">
+                        </div>
+                        <div class="form-group">
+                            <b style="color: #696969">RFC:</b>
+                            <input type="text" class="form-control" id="rfc" name="rfc" placeholder="" onfocus="getRFC(register)">
+                        </div>
                         <div class="form-group login-group-checkbox">
-                            <input type="radio" class="" name="reg_gender" id="male" placeholder="nombre de usuario">
+                            <input type="radio" class="" name="reg_gender" id="male" placeholder="">
                             <label for="male">masculino</label>
                             
-                            <input type="radio" class="" name="reg_gender" id="female" placeholder="nombre de usuario">
+                            <input type="radio" class="" name="reg_gender" id="female" placeholder="">
                             <label for="female">femenino</label>
                         </div>
                         
@@ -116,7 +140,7 @@
             <div class="logo" style="color: DarkOrange">Contraseña olvidada</div>
             <!-- Main Form -->
             <div class="login-form-1">
-                <form id="forgot-password-form" class="text-left">
+                <form id="forgot" class="text-left">
                     <div class="etc-login-form">
                         <p> Cuando ingrese su dirección de correo electrónico registrada, se le enviarán instrucciones sobre cómo restablecer su contraseña. </ p>                    </div>
                     <div class="login-form-main-message"></div>

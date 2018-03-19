@@ -5,7 +5,7 @@ li :hover {
 }
 
 * {
-    font-family: Arial, Verdana, sans-serif;
+    font-family: 'Varela Round';
     color: #665544;
     text-align: center;}
 body {
@@ -15,7 +15,7 @@ body {
 }
 #content {
     overflow: auto;}
-#nav, .home, .registro, #footer {
+#nav, .home, .registro, .galeria, #footer {
     margin: 1%;}
 .logo{
     display: inline;
@@ -30,7 +30,7 @@ body {
 li {
     display: inline;
     padding: 0.5em;}
-#nav, #footer, .home, .registro {
+#nav, #footer, .home, .registro, .galeria {
     background-color: #efefef;
     padding: 0.5em 0;}
 
@@ -41,10 +41,13 @@ li {
 }
 
 .registro{
-    height: 43em;
+    height: 55em;
+    margin-bottom: 1em;
+    background-color: #efefef;
+    margin: 1%;
 }
-.porsi {
-    height: 30em;
+.galeria {
+    height: 38em;
     margin-bottom: 1em;
     background-color: #efefef;
     margin: 1%;
